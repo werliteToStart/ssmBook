@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book</title>
+    <link rel="stylesheet" type="text/css" href="/css/allBook.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- 引入 jQuery -->
+    <script src="/js/ajax.js"></script>
+</head>
+<body>
+    <div class="main">
+        <h1>书籍列表——————展示所有书籍</h1>
+        <hr>
+        <div class="but_box">
+            <div class="but_book1">
+                <button type="button">新增书籍</button>
+                <button type="button">展示全部书籍</button>
+            </div>
+            <div class="but_book2">
+                <form>
+                    <label>搜索查找</label>
+                    <input type="text" placeholder="请输入书籍编号">
+                    <button type="button">查询</button>
+                </form>
+            </div>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>书籍编号</th>
+                        <th>书籍名称</th>
+                        <th>书籍数量</th>
+                        <th>书籍详情</th>
+                        <th>操作</th>
+
+                    </tr>
+                </thead>
+                <tbody id="bookList">
+                <!-- Ajax 渲染的书籍内容会插入在这里 -->
+                </tbody>
+            </table>
+        </div>
+        <div class="box">
+            <input id="bookName" placeholder="书籍名称" type="text" required="required">
+            <input id="bookCounts" placeholder="书籍数量" type="text" required="required">
+            <input id="detail" placeholder="书籍详情" type="text" required="required">
+            <button type="button">确定</button>
+        </div>
+    </div>
+    <div class="box_grey"></div>
+</body>
+</html>
